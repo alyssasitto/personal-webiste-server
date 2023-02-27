@@ -4,7 +4,7 @@ const app = express();
 
 require("./config")(app);
 
-require("dotenv").config();
+require("dotenv/config");
 
 const emailRouter = require("./routes/email.routes");
 app.use("/", emailRouter);
