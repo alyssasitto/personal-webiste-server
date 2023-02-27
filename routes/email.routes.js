@@ -5,8 +5,6 @@ const nodemailer = require("nodemailer");
 router.post("/contact", (req, res) => {
 	const { name, email, message } = req.body;
 
-	console.log(process.env.ORIGIN);
-
 	if (name === "" || email === "" || message === "") {
 		return res
 			.status(400)
